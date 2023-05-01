@@ -215,10 +215,7 @@ def athelete():
     fig.update_layout(autosize=False, width=1000, height=600)
     graph3Json = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return render_template('athelete.html', form=form, form1=form1, graph1JSON=graph1Json, header1=header1, graph2JSON=graph2Json, header2=header2, header3=header3, graph3JSON=graph3Json, header4=header4)
-'''
+
 if __name__ == "__main__": 
-    print(" * Going for dataset preprocessing")
-    preprocessed_df = preprocess(df, region_df)
-    print(" * Preprocessing completed!!! ")
-    app.run(debug=True,port=5001)
-'''
+    app.run(host="0.0.0.0",port=5000)
+
